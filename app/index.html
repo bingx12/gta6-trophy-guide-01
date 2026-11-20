@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI: all 55 trophies, roadmap &amp; tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 GTA VI trophies on PS5: official names, descriptions and grades, a cited guide for every trophy, a roadmap to the Platinum, missable flags, and a checklist that saves in your browser.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; Leonida</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="subtitle">Every one of the 55 trophies — official name, description and grade — with a guide in our own words, its sources, a roadmap to the Platinum, and a checklist that remembers your progress. No online trophies. One playthrough. About 200 hours.</p>
+    <p class="facts" id="facts">55 trophies &middot; 1 Platinum &middot; 2 Gold &middot; 6 Silver &middot; 46 Bronze &middot; 28 hidden &middot; 0 online</p>
+  </div>
+</header>
+
+<main>
+  <section class="progress" aria-label="Progress">
+    <div class="progress-head">
+      <h2>Your progress</h2>
+      <p class="progress-count" id="progressCount">0 of 55 earned</p>
+    </div>
+    <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><span id="progressFill"></span></div>
+    <p class="grade-counts" id="gradeCounts"></p>
+    <div class="progress-actions">
+      <button id="exportBtn" type="button">Export progress</button>
+      <label class="import-label">Import progress <input id="importInput" type="file" accept="application/json,.json"></label>
+      <button id="shareBtn" type="button">Copy share link</button>
+      <span class="status" id="ioStatus" role="status"></span>
+    </div>
+  </section>
+
+  <nav class="tabs" aria-label="Views">
+    <button type="button" class="tab active" data-view="checklist" id="tabChecklist">Checklist</button>
+    <button type="button" class="tab" data-view="roadmap" id="tabRoadmap">Roadmap to the Platinum</button>
+  </nav>
+
+  <section id="roadmapView" class="roadmap" hidden>
+    <h2>Roadmap to the Platinum</h2>
+    <p class="roadmap-estimate" id="roadmapEstimate"></p>
+    <div id="roadmapStages"></div>
+    <aside class="missable-callout">
+      <h3>Missable trophies: one, possibly</h3>
+      <p><strong>Positive Mental Attitude</strong> is the only trophy PowerPyx and GTABase flag as possibly missable. The first meditation — Lucia on the balcony at Jason&rsquo;s house, after the mission <em>Down to Earth</em> — is reported to disappear once Chapter 1 ends. Do it in Chapter 1 and the rest of the list is safe: there is no mission replay, but free-roam after the story keeps everything else reachable.</p>
+    </aside>
+  </section>
+
+  <section id="checklistView" class="checklist">
+    <div class="controls">
+      <label class="search-label">Search <input id="searchInput" type="search" placeholder="Name, mission, or guide text…" autocomplete="off"></label>
+      <label class="grade-label">Grade
+        <select id="gradeSelect">
+          <option value="all">All grades</option>
+          <option value="Platinum">Platinum</option>
+          <option value="Gold">Gold</option>
+          <option value="Silver">Silver</option>
+          <option value="Bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="spoiler-label"><input id="spoilerToggle" type="checkbox"> Hide story spoilers</label>
+    </div>
+    <div class="kind-filters" id="kindFilters" role="group" aria-label="Filter by kind">
+      <button type="button" class="chip active" data-kind="all">All <span class="chip-count" data-count="all"></span></button>
+      <button type="button" class="chip" data-kind="story">Story <span class="chip-count" data-count="story"></span></button>
+      <button type="button" class="chip" data-kind="missable">Missable <span class="chip-count" data-count="missable"></span></button>
+      <button type="button" class="chip" data-kind="collectible">Collectibles <span class="chip-count" data-count="collectible"></span></button>
+      <button type="button" class="chip" data-kind="activity">Activities <span class="chip-count" data-count="activity"></span></button>
+      <button type="button" class="chip" data-kind="online">Online <span class="chip-count" data-count="online"></span></button>
+    </div>
+    <p class="list-meta" id="listMeta"></p>
+    <section id="detail" class="detail" hidden></section>
+    <ul class="trophy-list" id="trophyList"></ul>
+    <p class="empty" id="emptyState" hidden>No trophies match this filter. Try clearing the search or choosing another kind.</p>
+  </section>
+
+  <footer class="notes">
+    <h2>About this guide</h2>
+    <p>Names, descriptions and grades are the official PlayStation list as Exophase and PSNProfiles published it on 18 November 2026. Every guide is written for this page, in its own words, and names its sources beside it — PowerPyx, GTABase, Push Square, KeenGamer and EGamers — so you can check any step yourself. Where those guides disagree or have not confirmed a step yet, the guide says so instead of guessing. This guide works fully offline: it loads nothing from the network, and your progress never leaves your browser unless you export it.</p>
+    <p class="credit">An unofficial fan guide. Not affiliated with Rockstar Games, Sony or PlayStation. No Rockstar logo or artwork is used here.</p>
+  </footer>
+</main>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
